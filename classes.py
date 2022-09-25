@@ -7,6 +7,8 @@ class Course:
     department = ""
     course_code: str = ""
     credit_info: str = ""
+    num_credits: str = ""
+    semesters_offered: str = ""
     description: str = ""
     prereq: str = ""
 
@@ -80,3 +82,6 @@ class CustomParse(HTMLParser):
 
     def get_course_list(self):
         return self.list_of_courses
+
+    def flush_course_list(self):
+        self.list_of_courses = []
